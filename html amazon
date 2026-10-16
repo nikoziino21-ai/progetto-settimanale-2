@@ -64,16 +64,131 @@
                 </article>
             </div>
         </section>
-
-        <section class="products-section">
+ <!-- I PIÙ VENDUTI -->
+        <section class="section-block">
             <h2>I più venduti</h2>
-            <div id="prodotti" class="products-grid"></div>
+            <div class="products-grid">
+        <!-- Prodotto 1 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">Cuffie</div>
+                    <div class="product-info">
+                        <h3>Cuffie wireless con cancellazione del rumore</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="rating-count">(4.2)</span>
+                        </div>
+                        <div class="product-price">€ 89,99</div>
+                        <button class="add-cart-btn">Aggiungi al carrello</button>
+                    </div>
+                </div>
+
+                <!-- Prodotto 2 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">Tablet</div>
+                    <div class="product-info">
+                        <h3>Tablet 10 pollici 64GB</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="rating-count">(4.7)</span>
+                        </div>
+                        <div class="product-price">€ 199,00</div>
+                        <button class="add-cart-btn">Aggiungi al carrello</button>
+                    </div>
+                </div>
+
+                <!-- Prodotto 3 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">Libro</div>
+                    <div class="product-info">
+                        <h3>Il romanzo dell'anno</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span class="rating-count">(4.0)</span>
+                        </div>
+                        <div class="product-price">€ 14,90</div>
+                        <button class="add-cart-btn">Aggiungi al carrello</button>
+                    </div>
+                </div>
+
+                <!-- Prodotto 4 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">Zaino</div>
+                    <div class="product-info">
+                        <h3>Zaino da viaggio 30L impermeabile</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="rating-count">(4.3)</span>
+                        </div>
+                        <div class="product-price">€ 49,99</div>
+                        <button class="add-cart-btn">Aggiungi al carrello</button>
+                    </div>
+                </div>
+
+                <!-- Prodotto 5 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">Lampada</div>
+                    <div class="product-info">
+                        <h3>Lampada LED da scrivania orientabile</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i>
+                            <span class="rating-count">(3.8)</span>
+                        </div>
+                        <div class="product-price">€ 29,50</div>
+                        <button class="add-cart-btn">Aggiungi al carrello</button>
+                    </div>
+                </div>
+
+                <!-- Prodotto 6 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">Smartwatch</div>
+                    <div class="product-info">
+                        <h3>Smartwatch fitness con GPS</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="rating-count">(4.4)</span>
+                        </div>
+                        <div class="product-price">€ 119,00</div>
+                        <button class="add-cart-btn">Aggiungi al carrello</button>
+                    </div>
+                </div>
+
+                <!-- Prodotto 7 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">Mouse</div>
+                    <div class="product-info">
+                        <h3>Mouse ergonomico wireless</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="rating-count">(4.1)</span>
+                        </div>
+                        <div class="product-price">€ 24,90</div>
+                        <button class="add-cart-btn">Aggiungi al carrello</button>
+                    </div>
+                </div>
+
+                <!-- Prodotto 8 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">Caffettiera</div>
+                    <div class="product-info">
+                        <h3>Caffettiera moka 6 tazze</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="rating-count">(4.6)</span>
+                        </div>
+                        <div class="product-price">€ 22,00</div>
+                        <button class="add-cart-btn">Aggiungi al carrello</button>
+                    </div>
+                </div>
+
+            </div>
         </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-columns">
-            <div class="footer-col">
+        <div class="footer-container">
+            <div class="footer-column">
                 <h4>Chi siamo</h4>
                 <ul>
                     <li><a href="#">Lavora con noi</a></li>
@@ -81,7 +196,7 @@
                     <li><a href="#">Sostenibilità</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
+            <div class="footer-column">
                 <h4>Aiuto</h4>
                 <ul>
                     <li><a href="#">Centro assistenza</a></li>
@@ -89,8 +204,8 @@
                     <li><a href="#">Resi e rimborsi</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Connettiti con noi</h4>
+            <div class="footer-column">
+                <h4>Connettiti</h4>
                 <ul>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">Instagram</a></li>
@@ -100,6 +215,5 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
