@@ -1,0 +1,237 @@
+/* VERSIONE INTERMEDIA — array prodotti
+   Crea l'array "prodotti" con almeno 12 oggetti.
+   Ogni oggetto: nome, categoria, prezzo, rating (1-5), immagine, disponibile.
+*/
+
+/* SCRIVI QUI LA TUA RISposta */
+const prodotti = [
+    {
+        nome: "Smart TV 4K 55\"",
+        categoria: "Elettronica",
+        prezzo: 399.99,
+        rating: 4,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Cuffie Wireless Noise Cancelling",
+        categoria: "Elettronica",
+        prezzo: 89.90,
+        rating: 5,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Romanzo Thriller Bestseller",
+        categoria: "Libri",
+        prezzo: 16.50,
+        rating: 4,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Manuale di Programmazione JavaScript",
+        categoria: "Libri",
+        prezzo: 34.00,
+        rating: 5,
+        immagine: "https://placehold.co/300x200",
+        disponibile: false
+    },
+    {
+        nome: "Felpa con Cappuccio Unisex",
+        categoria: "Abbigliamento",
+        prezzo: 29.99,
+        rating: 3,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Scarpe da Ginnastica Sportive",
+        categoria: "Abbigliamento",
+        prezzo: 59.99,
+        rating: 4,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Set Scope e Palette per la Casa",
+        categoria: "Casa",
+        prezzo: 14.99,
+        rating: 2,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Lampada da Tavolo LED Design",
+        categoria: "Casa",
+        prezzo: 24.50,
+        rating: 4,
+        immagine: "https://placehold.co/300x200",
+        disponibile: false
+    },
+    {
+        nome: "Mouse Gaming RGB",
+        categoria: "Elettronica",
+        prezzo: 39.99,
+        rating: 4,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Tastiera Meccanica Wireless",
+        categoria: "Elettronica",
+        prezzo: 75.00,
+        rating: 5,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Libro di Cucina Italiana",
+        categoria: "Libri",
+        prezzo: 22.00,
+        rating: 3,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    },
+    {
+        nome: "Giacca Impermeabile",
+        categoria: "Abbigliamento",
+        prezzo: 79.99,
+        rating: 4,
+        immagine: "https://placehold.co/300x200",
+        disponibile: true
+    }
+];
+
+
+/* VERSIONE INTERMEDIA — formattaPrezzo(prezzo)
+   Funzione che ritorna una stringa tipo "€ 19,99".
+   Esempio in console.log: Monitor: € 150,00
+*/
+
+/* SCRIVI QUI LA TUA RISposta */
+const formattaPrezzo = function(prezzo) {
+    const prezzoFormattato = prezzo.toFixed(2).replace('.', ',');
+    return `€ ${prezzoFormattato}`;
+};
+
+console.log("Monitor: " + formattaPrezzo(150.00));
+
+
+/* VERSIONE INTERMEDIA — stelline(rating)
+   Funzione che ritorna una stringa di stelline piene/vuote.
+   Esempio: rating 3 → "★★★☆☆"
+   Esempio in console.log: Monitor: rating 3 → "★★★☆☆"
+*/
+
+/* SCRIVI QUI LA TUA RISposta */
+const stelline = function(rating) {
+    let stellePiene = "★".repeat(rating);
+    let stelleVuote = "☆".repeat(5 - rating);
+    return stellePiene + stelleVuote;
+};
+
+console.log("Monitor: rating 3 → " + stelline(3));
+
+/* VERSIONE INTERMEDIA — Filtro per categoria
+   Funzione che riceve il parametro categoria e filtra l'array prodotti mostrando solo i prodotti della categoria ricevuta
+*/
+
+/* SCRIVI QUI LA TUA RISposta */
+const filtraPerCategoria = function(categoriaScelta) {
+    return prodotti.filter(prod => prod.categoria.toLowerCase() === categoriaScelta.toLowerCase());
+};
+
+console.log("Prodotti categoria Elettronica:", filtraPerCategoria("Elettronica"));
+
+
+/* VERSIONE INTERMEDIA — Filtro disponibilità e rating
+   Funzione che genera un array filtrato dall'array prodotti, mostrando soltanto i prodotti disponibili con rating >= 3
+*/
+
+/* SCRIVI QUI LA TUA RISposta */
+const filtraDisponibiliEBuoni = function() {
+    return prodotti.filter(prod => prod.disponibile && prod.rating >= 3);
+};
+
+console.log("Prodotti disponibili con rating >= 3:", filtraDisponibiliEBuoni());
+
+
+/* --------------------------------------------------------------
+
+/* VERSIONE AVANZATA — renderProdotti(lista)
+   Funzione che, dato un array di prodotti, genera la griglia nel DOM.
+   Niente HTML hard-coded per i prodotti: tutto generato dal JavaScript.
+*/
+
+/* SCRIVI QUI LA TUA RISposta */
+const renderProdotti = function(lista) {
+    const container = document.querySelector("#prodotti");
+    if (!container) return;
+    
+    container.innerHTML = "";
+    
+    lista.forEach(prod => {
+        const card = document.createElement("div");
+        card.className = "prodotto-card";
+        
+        let statoBottone = prod.disponibile 
+            ? `<button class="btn-carrello">Aggiungi al carrello</button>` 
+            : `<button class="btn-carrello" disabled>Esaurito</button>`;
+        
+        card.innerHTML = `
+            <img src="${prod.immagine}" alt="${prod.nome}" width="200">
+            <h3>${prod.nome}</h3>
+            <p>Categoria: ${prod.categoria}</p>
+            <p>Prezzo: ${formattaPrezzo(prod.prezzo)}</p>
+            <p>Rating: ${stelline(prod.rating)}</p>
+            ${statoBottone}
+        `;
+        
+        container.appendChild(card);
+    });
+};
+
+
+/* VERSIONE AVANZATA — Aggiungi al carrello
+   Quando si clicca il bottone "Aggiungi al carrello", incrementa il contatore
+   nell'header (Carrello (0) → Carrello (1) → ...).
+   Per i prodotti esauriti: bottone disabilitato e testo "Esaurito".
+   Suggerimento: usa una closure come visto in aula
+*/
+
+/* SCRIVI QUI LA TUA RISposta */
+const gestoreCarrello = (function() {
+    let contatore = 0;
+    return function() {
+        contatore++;
+        console.log(`Carrello (${contatore})`);
+    }
+})();
+
+document.addEventListener("click", function(e) {
+    if (e.target && e.target.classList.contains("btn-carrello") && !e.target.disabled) {
+        gestoreCarrello();
+    }
+});
+
+
+/* VERSIONE AVANZATA — Ordinamento
+   Menu a tendina con: Prezzo crescente, Prezzo decrescente, Rating.
+   Suggerimento: per rendere più leggibile la select puoi usare optgroup
+*/
+
+/* SCRIVI QUI LA TUA RISposta */
+const ordinaProdotti = function(criterio) {
+    let copiaProdotti = [...prodotti];
+    if (criterio === "crescente") {
+        copiaProdotti.sort((a, b) => a.prezzo - b.prezzo);
+    } else if (criterio === "decrescente") {
+        copiaProdotti.sort((a, b) => b.prezzo - a.prezzo);
+    } else if (criterio === "rating") {
+        copiaProdotti.sort((a, b) => b.rating - a.rating);
+    }
+    renderProdotti(copiaProdotti);
+};
+
+
