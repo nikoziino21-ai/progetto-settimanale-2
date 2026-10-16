@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">amazon</div>
+            <div class="search-bar">
+                <input type="search" placeholder="Cerca prodotti, categorie, brand...">
+                <button type="button">Cerca</button>
+            </div>
+            <nav class="header-nav">
+                <a href="#">Account</a>
+                <a href="#">Ordini</a>
+                <a href="#" class="cart-link">Carrello (0)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Le offerte di oggi</h1>
+                <p>Sconti fino al 70% su elettronica, libri, casa e molto altro</p>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <h2>Categorie</h2>
+            <div class="categories-grid">
+                <article class="category-card cat-elettronica">
+                    <div class="card-visual">Elettronica</div>
+                    <div class="card-info">
+                        <h3>Elettronica</h3>
+                        <a href="#">Scopri di più</a>
+                    </div>
+                </article>
+                <article class="category-card cat-libri">
+                    <div class="card-visual">Libri</div>
+                    <div class="card-info">
+                        <h3>Libri</h3>
+                        <a href="#">Scopri di più</a>
+                    </div>
+                </article>
+                <article class="category-card cat-abbigliamento">
+                    <div class="card-visual">Abbigliamento</div>
+                    <div class="card-info">
+                        <h3>Abbigliamento</h3>
+                        <a href="#">Scopri di più</a>
+                    </div>
+                </article>
+                <article class="category-card cat-casa">
+                    <div class="card-visual">Casa</div>
+                    <div class="card-info">
+                        <h3>Casa</h3>
+                        <a href="#">Scopri di più</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>I più venduti</h2>
+            <div id="prodotti" class="products-grid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Chi siamo</h4>
+                <ul>
+                    <li><a href="#">Lavora con noi</a></li>
+                    <li><a href="#">Investitori</a></li>
+                    <li><a href="#">Sostenibilità</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Aiuto</h4>
+                <ul>
+                    <li><a href="#">Centro assistenza</a></li>
+                    <li><a href="#">Spedizioni</a></li>
+                    <li><a href="#">Resi e rimborsi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connettiti con noi</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
