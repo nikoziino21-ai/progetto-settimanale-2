@@ -1,13 +1,174 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le offerte di oggi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <header>
+    <div class="logo">amazon</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Cerca prodotti, categorie, brand...">
+      <button>Cerca</button>
+    </div>
+    <div class="header-links">
+      <span>Account</span>
+      <span>Ordini</span>
+      <span id="carrello-counter" class="cart-badge">Carrello (0)</span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Le offerte di oggi</h1>
+    <p>Sconti fino al 70% su elettronica, libri, casa e molto altro</p>
+  </div>
+
+  <div class="container">
     
-    <div id="prodotti" class="griglia"></div>
-    <script src="script.js"></script>
+   
+    <section>
+      <h2>I più venduti</h2>
+      <div class="controls">
+        <select id="ordinamento">
+          <option value="" disabled selected>Filtra/Ordina per...</option>
+          <optgroup label="Prezzo">
+            <option value="prezzo-crescente">Prezzo crescente</option>
+            <option value="prezzo-decrescente">Prezzo decrescente</option>
+          </optgroup>
+          <optgroup label="Valutazione">
+            <option value="rating">Rating</option>
+          </optgroup>
+        </select>
+      </div>
+      <div id="griglia-prodotti" class="grid">
+        <!-- Generato via JS -->
+      </div>
+    </section>
+
+    <!-- Sezione Tabella con i dati del primo esercizio -->
+    <section>
+      <h2>Tabella Analitica primo esercizio (Array Prodotti)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome Prodotto</th>
+            <th>Categoria</th>
+            <th>Prezzo (€)</th>
+            <th>Rating (1-5)</th>
+            <th>Immagine</th>
+            <th>Disponibile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cuffie Wireless</td>
+            <td>Elettronica</td>
+            <td>89.99</td>
+            <td>4</td>
+            <td>cuffie.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Tablet 10 pollici</td>
+            <td>Elettronica</td>
+            <td>199.00</td>
+            <td>5</td>
+            <td>tablet.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Romanzo bestseller</td>
+            <td>Libri</td>
+            <td>14.90</td>
+            <td>4</td>
+            <td>libro.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Zaino da viaggio 30L</td>
+            <td>Abbigliamento</td>
+            <td>49.99</td>
+            <td>4</td>
+            <td>zaino.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Lampada LED</td>
+            <td>Casa</td>
+            <td>29.50</td>
+            <td>3</td>
+            <td>lampada.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Smartwatch fitness</td>
+            <td>Elettronica</td>
+            <td>119.00</td>
+            <td>4</td>
+            <td>smartwatch.jpg</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Mouse ergonomico</td>
+            <td>Elettronica</td>
+            <td>24.90</td>
+            <td>5</td>
+            <td>mouse.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Caffettiera moka</td>
+            <td>Casa</td>
+            <td>22.00</td>
+            <td>5</td>
+            <td>caffettiera.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Felpa con cappuccio</td>
+            <td>Abbigliamento</td>
+            <td>39.99</td>
+            <td>3</td>
+            <td>felpa.jpg</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Manuale di Programmazione</td>
+            <td>Libri</td>
+            <td>35.00</td>
+            <td>5</td>
+            <td>manuale.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Tappeto moderno</td>
+            <td>Casa</td>
+            <td>59.90</td>
+            <td>4</td>
+            <td>tappeto.jpg</td>
+            <td>Sì</td>
+          </tr>
+          <tr>
+            <td>Boraccia termica</td>
+            <td>Casa</td>
+            <td>18.50</td>
+            <td>5</td>
+            <td>boraccia.jpg</td>
+            <td>Sì</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <footer>
+    
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
